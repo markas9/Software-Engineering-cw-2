@@ -1,0 +1,11 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 18: invalid syntax
+    $room_list = ["library", "laboratory", "math_department", "physics_department",
+     ^
+    
+
+Ren'Py Version: Ren'Py 7.4.10.2178
+Sun Nov 21 14:55:10 2021
