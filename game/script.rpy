@@ -1,6 +1,5 @@
 define jp = Character('Julia Padget', color="c8ffc8")
 define s = Character('Student', color="c8ffc8")
-
 screen ranking_stats:
     frame:
         xalign 0.03 ypos 50
@@ -16,18 +15,22 @@ screen ranking_stats:
                 thumb None
                 thumb_shadow None
 
-screen stat(name, amount):
-
-    text name xalign 0.5
-    bar value StaticValue(amount, 100) xalign 0.5 xsize 250
-
+# label start:
+#
+#     ## Everything here will be executed first and only once!
+#     show screen ranking_stats
+#
+#     ##Shuffles order of which rooms will appear
+#     $renpy.random.shuffle(room_list)
+#     jump begin
 
 label start:
-
     show screen ranking_stats
-    play music "8-bit music.mp3" fadeout 1
-    $renpy.random.shuffle(room_list)
+    ## Need to initialize when player loses and starts over
+    jump initialize
+    
 
+label begin:
     scene University of Bath Campus
     with fade
 
@@ -38,11 +41,11 @@ label start:
 
     jp "<INSERT DIALOGUE FOR JULIA PADGET>"
     "[room_list]"
+    menu:
 
-menu:
+        "Start Game?":
+            jump math_department
+            #jump expression next_room()
 
-    "Start Game?":
-        jump expression next_room()
-
-    "Return":
-        "Do nothing"
+        "Return":
+            "Do nothing"
