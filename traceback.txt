@@ -1,14 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 20, in script
+  File "game/script.rpy", line 33, in script
     with fade
-IOError: Couldn't find file '8-bit music.mp3'.
+  File "game/script.rpy", line 4, in execute
+    screen ranking_stats:
+  File "game/script.rpy", line 4, in execute
+    screen ranking_stats:
+  File "game/script.rpy", line 5, in execute
+    frame:
+  File "game/script.rpy", line 7, in execute
+    vbox:
+  File "game/script.rpy", line 10, in execute
+    bar:
+  File "game/script.rpy", line 10, in keywords
+    bar:
+  File "game/script.rpy", line 13, in <module>
+    range ranking_meter_mRax
+NameError: name 'ranking_meter_mRax' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 20, in script
+  File "game/script.rpy", line 33, in script
     with fade
   File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 1443, in execute
     renpy.exports.with_statement(trans, paired)
@@ -18,23 +32,43 @@ Full traceback:
     clear=clear)
   File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3315, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 4020, in interact_core
-    renpy.audio.audio.periodic()
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/audio/audio.py", line 1162, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/audio/audio.py", line 1140, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/audio/audio.py", line 1082, in periodic_pass
-    c.periodic()
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/audio/audio.py", line 518, in periodic
-    topf = load(filename)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/audio/audio.py", line 69, in load
-    rv = renpy.loader.load(fn)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/loader.py", line 798, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file '8-bit music.mp3'.
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3735, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3735, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 4, in execute
+    screen ranking_stats:
+  File "game/script.rpy", line 4, in execute
+    screen ranking_stats:
+  File "game/script.rpy", line 5, in execute
+    frame:
+  File "game/script.rpy", line 7, in execute
+    vbox:
+  File "game/script.rpy", line 10, in execute
+    bar:
+  File "game/script.rpy", line 10, in keywords
+    bar:
+  File "game/script.rpy", line 13, in <module>
+    range ranking_meter_mRax
+NameError: name 'ranking_meter_mRax' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
 The Great Escape of Julia Padget 1.0
-Sun Nov 21 21:27:50 2021
+Thu Nov 25 16:29:16 2021
