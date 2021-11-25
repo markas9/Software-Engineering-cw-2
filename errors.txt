@@ -2,30 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/rooms.rpy", line 2: expected statement.
-    ranking_meter = 10
-                  ^
-
-File "game/rooms.rpy", line 3: expected statement.
-    ranking_meter_max = 100
-                      ^
-
-File "game/rooms.rpy", line 4: expected statement.
-    room_list = ["library", "laboratory", "math_department", "physics_department",
-              ^
-        "chemistry_department", "biology_department", "cs_department", "staff_lounge"]
-
-File "game/rooms.rpy", line 6: expected statement.
-    dungeon_length = 3
-                   ^
-
-File "game/rooms.rpy", line 7: expected statement.
-    renpy.random.shuffle(room_list)
-                                   ^
-
-File "game/rooms.rpy", line 8: expected statement.
-    renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
-                                                                            ^
+File "game/functions.rpy", line 13: invalid syntax
+    show screen ranking_stats
+               ^
+    
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Thu Nov 25 19:04:19 2021
+Thu Nov 25 22:44:47 2021

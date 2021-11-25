@@ -1,36 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/rooms.rpy", line 2, in script
-    init python:
-  File "game/rooms.rpy", line 2, in script
-    init python:
-  File "game/rooms.rpy", line 9, in <module>
-    renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
-Exception: Can't play music during init phase.
+  File "game/rooms.rpy", line 35, in script
+    jump expression next_room()
+  File "game/rooms.rpy", line 35, in <module>
+    jump expression next_room()
+  File "game/functions.rpy", line 23, in next_room
+    change()
+NameError: global name 'change' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/main.py", line 550, in main
-    renpy.game.context().run(node)
-  File "game/rooms.rpy", line 2, in script
-    init python:
-  File "game/rooms.rpy", line 2, in script
-    init python:
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/rooms.rpy", line 9, in <module>
-    renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/audio/music.py", line 87, in play
-    raise Exception("Can't play music during init phase.")
-Exception: Can't play music during init phase.
+  File "game/rooms.rpy", line 35, in script
+    jump expression next_room()
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 1755, in execute
+    target = renpy.python.py_eval(target)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2276, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/rooms.rpy", line 35, in <module>
+    jump expression next_room()
+  File "game/functions.rpy", line 23, in next_room
+    change()
+NameError: global name 'change' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
 The Great Escape of Julia Padget 1.0
-Thu Nov 25 19:04:45 2021
+Thu Nov 25 22:40:48 2021

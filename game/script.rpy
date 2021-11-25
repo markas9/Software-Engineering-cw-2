@@ -15,20 +15,12 @@ screen ranking_stats:
                 thumb None
                 thumb_shadow None
 
-# label start:
-#
-#     ## Everything here will be executed first and only once!
-#     show screen ranking_stats
-#
-#     ##Shuffles order of which rooms will appear
-#     $renpy.random.shuffle(room_list)
-#     jump begin
 
 label start:
     show screen ranking_stats
     ## Need to initialize when player loses and starts over
     jump initialize
-    
+
 
 label begin:
     scene University of Bath Campus

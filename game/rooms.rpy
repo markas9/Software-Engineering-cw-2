@@ -1,32 +1,3 @@
-label initialize:
-    python:
-        ranking_meter = 10
-        ranking_meter_max = 100
-        room_list = ["library", "laboratory", "math_department", "physics_department",
-        "chemistry_department", "biology_department", "cs_department", "staff_lounge"]
-        dungeon_length = 3
-        renpy.random.shuffle(room_list)
-        renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
-    jump begin
-
-init python:
-    ranking_meter = 10
-    ranking_meter_max = 100
-    room_list = []
-
-
-    def next_room():
-        if len(room_list) <= dungeon_length:
-            room = renpy.jump("parking_lot")
-        else:
-            room = room_list.pop(0)
-
-        ##Changes music depending of University ranking meter
-        if(renpy.music.get_playing(channel=u'music') != "audio/Land_of_8_Bits(lower_volume).mp3"):
-            if(ranking_meter >= 20):
-                renpy.music.play("audio/Land_of_8_Bits(lower_volume).mp3", fadeout=1)
-        return room
-
 
 label laboratory:
     scene laboratory
