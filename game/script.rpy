@@ -18,6 +18,7 @@ screen ranking_stats:
 
 label start:
     show screen ranking_stats
+    show screen map_button
     ## Need to initialize when player loses and starts over
     jump initialize
 
