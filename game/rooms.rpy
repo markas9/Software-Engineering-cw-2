@@ -1,3 +1,4 @@
+
 label laboratory:
     scene laboratory
     show student_laboratory at right
@@ -24,12 +25,18 @@ label math_department:
     scene math_department
     show student_math at right
     with dissolve
-    s "<INSERT QUESTION BY MATH STUDENT"
+    s "What is an obtuse angle?"
     menu:
-        "<INSERT ANSWER A (CORRECT)":
+        "Sorry, I am in a bit of a hurry!":
+            $ ranking_meter -= 5
             jump expression next_room()
-        "<INSERT ANSWER B (WRONG)":
+        "An obtuse angle is an angle over 90 degrees.":
+            $ ranking_meter += 10
+            jump expression next_room()
+        "You’re in uni and don’t know that? Go google it.":
+            $ ranking_meter -= 10
             jump start
+
 
 label english_department:
     scene english_department

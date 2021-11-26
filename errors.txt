@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 18: invalid syntax
-    $room_list = ["library", "laboratory", "math_department", "physics_department",
-     ^
-    
+File "game/map.rpy", line 16: Line is indented, but the preceding add statement does not expect a block. Please check this line's indentation.
+    frame:
+    ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Sun Nov 21 14:55:10 2021
+Fri Nov 26 00:29:01 2021
