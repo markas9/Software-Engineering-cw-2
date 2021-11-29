@@ -4,8 +4,9 @@ label initialize:
         ranking_meter = 10
         ranking_meter_max = 100
         #init room list with dungeon length which is then randomized
-        room_list = ["library", "laboratory", "math_department", "physics_department",
-        "chemistry_department", "biology_department", "cs_department", "staff_lounge"]
+        # room_list = ["library", "laboratory", "math_department", "physics_department",
+        # "chemistry_department", "biology_department", "cs_department", "staff_lounge"]
+        room_list = ["math_department", "language_department", "cs_department"]
         dungeon_length = 3
         renpy.random.shuffle(room_list)
         #init music that plays at the START of the game

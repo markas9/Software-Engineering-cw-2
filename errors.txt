@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/map.rpy", line 16: Line is indented, but the preceding add statement does not expect a block. Please check this line's indentation.
-    frame:
+File "game/rooms.rpy", line 96: expected menuitem
+    hide student_math with dissolve
     ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Fri Nov 26 00:29:01 2021
+Mon Nov 29 19:23:46 2021
