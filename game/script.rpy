@@ -37,8 +37,8 @@ label begin:
     menu:
 
         "Start Game?":
-            jump math_department
-            #jump expression next_room()
+            #jump languages_department
+            jump expression next_room()
 
         "Return":
             "Do nothing"

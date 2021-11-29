@@ -4,9 +4,7 @@ label initialize:
         ranking_meter = 10
         ranking_meter_max = 100
         #init room list with dungeon length which is then randomized
-        room_list = ["library", "laboratory", "math_department", "physics_department",
-        "chemistry_department", "biology_department", "cs_department", "staff_lounge"]
-        dungeon_length = 3
+        room_list = ["math_department", "languages_department", "cs_department"]
         renpy.random.shuffle(room_list)
         #init music that plays at the START of the game
         renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
@@ -15,7 +13,7 @@ label initialize:
 init python:
     #using a stack of the room list to jump to next room
     def next_room():
-        if len(room_list) <= dungeon_length:
+        if len(room_list) == 0:
             room = renpy.jump("parking_lot")
         else:
             room = room_list.pop(0)
