@@ -245,7 +245,7 @@ label cs_department:
     hide student_math with dissolve
 
     ## 3rd Student
-    show student_cs at center
+    show student_cs at left
     with dissolve
     s "I want to be able to take the square root of an input, but the command doesn’t work. What could my issue be?"
     menu:
@@ -290,7 +290,7 @@ label cs_department:
     hide student_math with dissolve
 
     ## 5th Student
-    show student_cs at center
+    show student_cs at left
     with dissolve
     s "Is it possible for me to put an if statement inside another if statement?"
     menu:
@@ -309,6 +309,7 @@ label cs_department:
     jump expression next_room()
 
 label parking_lot:
+    $check_ending_scene()
     "CONGRATULATIONS FINISHED"
     pause
     return

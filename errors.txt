@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/rooms.rpy", line 96: expected menuitem
-    hide student_math with dissolve
-    ^
+File "game/functions.rpy", line 33: invalid syntax
+        else if (ranking_meter >= 50):
+               ^
+    
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Mon Nov 29 19:23:46 2021
+Mon Nov 29 21:42:10 2021
