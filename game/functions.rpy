@@ -25,3 +25,14 @@ init python:
         if(renpy.music.get_playing(channel=u'music') != "audio/Land_of_8_Bits(lower_volume).mp3"):
             if(ranking_meter >= 20):
                 renpy.music.play("audio/Land_of_8_Bits(lower_volume).mp3", fadeout=1)
+
+    def check_ending_scene():
+        if(ranking_meter >= 80):
+            renpy.scene()
+            renpy.show("car_not_stolen")
+        elif (ranking_meter >= 50):
+            renpy.scene()
+            renpy.show("car_damaged")
+        else:
+            renpy.scene()
+            renpy.show("car_stolen")
