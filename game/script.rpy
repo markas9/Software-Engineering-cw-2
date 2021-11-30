@@ -18,7 +18,6 @@ screen ranking_stats:
 
 label start:
     show screen ranking_stats
-    show screen map_button
     ## Need to initialize when player loses and starts over
     jump initialize
 
@@ -33,12 +32,14 @@ label begin:
     with dissolve
 
     jp "<INSERT DIALOGUE FOR JULIA PADGET>"
-    "[room_list]"
+    "[department_list]"
     menu:
 
         "Start Game?":
-            #jump languages_department
-            jump expression next_room()
+            jump campus_map
+
+        "Skip to end (testing).":
+            jump parking_lot
 
         "Return":
             "Do nothing"
