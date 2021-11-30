@@ -4,19 +4,28 @@ label initialize:
         ranking_meter = 10
         ranking_meter_max = 100
         #init room list with dungeon length which is then randomized
-        room_list = ["math_department", "languages_department", "cs_department"]
-        renpy.random.shuffle(room_list)
+        department_list = ["math_department", "languages_department", "cs_department"]
         #init music that plays at the START of the game
         renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
+
+
+        #visited vairables (can change this to a proximity matrix later)
+        math_dep_visited = False
+        cs_dep_visited = False
+        languages_dep_visited = False
+
+    define five_points = 5
+    define ten_points = 10
+
     jump begin
 
 init python:
     #using a stack of the room list to jump to next room
-    def next_room():
-        if len(room_list) == 0:
-            room = renpy.jump("parking_lot")
+    def next_scene(label_list, default):
+        if len(label_list) == 0:
+            room = renpy.jump(default)
         else:
-            room = room_list.pop(0)
+            room = label_list.pop(0)
         change_music()
         return room
 
@@ -36,3 +45,6 @@ init python:
         else:
             renpy.scene()
             renpy.show("car_stolen")
+
+    def all_visited():
+        return math_dep_visited and cs_dep_visited and languages_dep_visited

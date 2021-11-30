@@ -1,15 +1,16 @@
+label campus_map:
+    scene utica map 720p
+    with dissolve
 
-screen map_button:
-    imagebutton:
-        xalign 1.0
-        yalign 0.0
-        xoffset -30
-        yoffset 30
-        auto "UI/map_%s.png"
-        action Jump ("call_mapUI")
+    if all_visited():
+        jump parking_lot
 
-label call_mapUI:
-    call screen MapUI
-
-screen MapUI():
-    add "map/map_bath.png"
+menu:
+    "Math Department" if not math_dep_visited:
+        jump math_department
+    "CS Department" if not cs_dep_visited:
+        jump cs_department
+    "Languages Department" if not languages_dep_visited:
+        jump languages_department
+    
+    
