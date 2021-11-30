@@ -19,6 +19,8 @@ ehthumbs_vista.db
 *~
 *.bak
 
+game/saves
+game/cache
 saves
 tmp
 cache
