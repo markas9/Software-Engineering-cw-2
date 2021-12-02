@@ -110,4 +110,6 @@ label cs_department:
             s "I will make sure to check those!"
     hide student_math with dissolve
 
-    jump campus_map
+    # jump campus_map
+    window hide
+    $renpy.call_screen("MapScreen",_layer="screens")

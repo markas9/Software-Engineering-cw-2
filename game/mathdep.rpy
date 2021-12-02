@@ -11,7 +11,10 @@ label math_department:
     jump expression next_scene(math_student_list, "math_end")
 
 label math_end:
-    jump campus_map
+    # jump campus_map
+    window hide
+    $renpy.call_screen("MapScreen",_layer="screens")
+
 
 label math_student_1:
     show math_student_1 at right
