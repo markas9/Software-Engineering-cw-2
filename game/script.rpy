@@ -36,7 +36,10 @@ label begin:
     menu:
 
         "Start Game?":
-            jump campus_map
+            # jump campus_map
+            window hide
+            $renpy.call_screen("MapScreen",_layer="screens")
+
 
         "Skip to end (testing).":
             jump parking_lot

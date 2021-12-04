@@ -19,6 +19,8 @@ label math_department:
     call expression mathStudent.getQuestion(mathQuestions)
 
     hide math_student with dissolve
-    jump campus_map
+    # jump campus_map
+    window hide
+    $renpy.call_screen("MapScreen",_layer="screens")
 
 

@@ -51,4 +51,7 @@ init python:
             renpy.show("car_stolen")
 
     def all_visited():
-        return math_dep_visited and cs_dep_visited and languages_dep_visited
+    
+        if math_dep_visited and cs_dep_visited and languages_dep_visited:
+                ui.close()
+                renpy.jump("parking_lot")

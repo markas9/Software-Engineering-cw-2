@@ -19,4 +19,6 @@ label cs_department:
     call expression csStudent.getQuestion(csQuestions)
     
     hide student_cs with dissolve
-    jump campus_map
+    # jump campus_map
+    window hide
+    $renpy.call_screen("MapScreen",_layer="screens")

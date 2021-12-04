@@ -19,4 +19,6 @@ label languages_department:
     call expression langStudent.getQuestion(langQuestions)
 
     hide student_languages with dissolve
-    jump campus_map
+    # jump campus_map
+    window hide
+    $renpy.call_screen("MapScreen",_layer="screens")
