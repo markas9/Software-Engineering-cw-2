@@ -3,8 +3,11 @@ label initialize:
         #Init ranking meter bar variables
         ranking_meter = 10
         ranking_meter_max = 100
-        #init room list with dungeon length which is then randomized
+        #init room list 
         department_list = ["math_department", "languages_department", "cs_department"]
+        #define generic question lists
+        genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5"]
+        renpy.random.shuffle(genericQuestions)
         #init music that plays at the START of the game
         renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
 
@@ -17,6 +20,7 @@ label initialize:
     define five_points = 5
     define ten_points = 10
 
+    call initializeStudent
     jump begin
 
 init python:
