@@ -2,12 +2,14 @@ label math_department:
     python:
         math_dep_visited = True
         #init room list with dungeon length which is then randomized
-        math_student_list = ["math_student_1", "math_student_2", 
-            "math_student_3","math_student_4","math_student_5"]
+        # math_student_list = ["math_student_1", "math_student_2",
+        #     "math_student_3","math_student_4","math_student_5"]
+        math_student_list = ["math_student_1", "math_student_2",
+            "math_student_3"]
         renpy.random.shuffle(math_student_list)
-    
+
     scene classroom_math_01 720p
-    
+
     jump expression next_scene(math_student_list, "math_end")
 
 label math_end:
@@ -41,6 +43,8 @@ label math_student_2:
         "A quick google search would answer that question...":
             $ ranking_meter -= ten_points
             s "Asking you was pointless..."
+            ##this can be done with adding "if calculator == true:" at the end
+            ## of this answer like so -> "ANSWER" if calculator == true:"
         "The value of pi is 3.14(add another 60 decimal places)
             (answer only available if certain item/stats acquired)":
             $ ranking_meter += ten_points

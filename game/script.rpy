@@ -1,11 +1,10 @@
-define jp = Character('Julia Padget', color="c8ffc8")
+define jg = Character("Julia Gadget")
 define s = Character('Student', color="c8ffc8")
 screen ranking_stats:
     frame:
         xalign 0.03 ypos 50
         vbox:
             text "Ranking Meter" size 22 xalign 0.5
-            null height 10
             bar:
                 xmaximum 200
                 value ranking_meter
@@ -26,13 +25,11 @@ label begin:
     scene University of Bath Campus
     with fade
 
-    "<START OF THE GAME>"
 
     show Julia Padget
     with dissolve
 
-    jp "<INSERT DIALOGUE FOR JULIA PADGET>"
-    "[department_list]"
+
     menu:
 
         "Start Game?":

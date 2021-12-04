@@ -12,5 +12,5 @@ menu:
         jump cs_department
     "Languages Department" if not languages_dep_visited:
         jump languages_department
-    
-    
+    "Skip to end (testing).":
+        jump parking_lot        

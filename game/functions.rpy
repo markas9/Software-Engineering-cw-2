@@ -3,6 +3,8 @@ label initialize:
         #Init ranking meter bar variables
         ranking_meter = 10
         ranking_meter_max = 100
+        user_name = ""
+        #score_leaderboard = []
         #init room list with dungeon length which is then randomized
         department_list = ["math_department", "languages_department", "cs_department"]
         #init music that plays at the START of the game
@@ -20,7 +22,19 @@ label initialize:
     jump begin
 
 init python:
-    #using a stack of the room list to jump to next room
+    #button which is used to add score on leaderboard
+    def addLeaderboardButton():
+        user_name = renpy.input("What is your name?", length=32)
+        user_name = user_name.strip()
+        addToLeaderboard(user_name)
+
+    #adds user to persistent data
+    def addToLeaderboard(username):
+        if not persistent.score_leaderboard:
+            persistent.score_leaderboard = []
+        persistent.score_leaderboard.append(username)
+
+    #using a stack of the room list to jump to next room/student
     def next_scene(label_list, default):
         if len(label_list) == 0:
             room = renpy.jump(default)
@@ -35,6 +49,7 @@ init python:
             if(ranking_meter >= 20):
                 renpy.music.play("audio/Land_of_8_Bits(lower_volume).mp3", fadeout=1)
 
+    ##Ending will vary depening on University ranking
     def check_ending_scene():
         if(ranking_meter >= 80):
             renpy.scene()
