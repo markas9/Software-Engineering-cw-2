@@ -7,10 +7,9 @@ label math_department:
         
         mathStudent = Student("Math Student", "mathStudent.png")
     
-    scene classroom_math_01 720p
-    
-    show math_student at right
-    with dissolve
+    scene classroom_math_01
+    show screen gameUI
+    show math_student at right with dissolve
 
     call expression mathStudent.getQuestion(mathQuestions)
     call expression mathStudent.getQuestion(mathQuestions)
@@ -19,8 +18,9 @@ label math_department:
     call expression mathStudent.getQuestion(mathQuestions)
 
     hide math_student with dissolve
-    # jump campus_map
+
     window hide
+    hide screen gameUI
     $renpy.call_screen("MapScreen",_layer="screens")
 
 

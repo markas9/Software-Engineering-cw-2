@@ -7,10 +7,9 @@ label cs_department:
         
         csStudent = Student("CS Student", "csStudent.png")
     
-    scene library 720p
-    
-    show student_cs at left
-    with dissolve
+    scene library
+    show screen gameUI
+    show student_cs at left with dissolve
 
     call expression csStudent.getQuestion(csQuestions)
     call expression csStudent.getQuestion(csQuestions)
@@ -19,6 +18,7 @@ label cs_department:
     call expression csStudent.getQuestion(csQuestions)
     
     hide student_cs with dissolve
-    # jump campus_map
+    
     window hide
+    hide screen gameUI
     $renpy.call_screen("MapScreen",_layer="screens")

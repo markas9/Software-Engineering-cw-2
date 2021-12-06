@@ -7,10 +7,9 @@ label languages_department:
         
         langStudent = Student("Lang Student", "langStudent.png")
 
-    scene classroom_generic_01 720p
-
-    show student_languages at right
-    with dissolve
+    scene classroom_generic_01
+    show screen gameUI
+    show student_languages at right with dissolve
 
     call expression langStudent.getQuestion(langQuestions)
     call expression langStudent.getQuestion(langQuestions)
@@ -19,6 +18,7 @@ label languages_department:
     call expression langStudent.getQuestion(langQuestions)
 
     hide student_languages with dissolve
-    # jump campus_map
+    
     window hide
+    hide screen gameUI
     $renpy.call_screen("MapScreen",_layer="screens")

@@ -1,7 +1,7 @@
 label parking_lot:
     $check_ending_scene()
     
-    scene school_gate 720p
+    scene school_gate
     with dissolve
 
     if ranking_meter >= 80:

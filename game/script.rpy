@@ -15,7 +15,6 @@ screen ranking_stats:
                 thumb None
                 thumb_shadow None
 
-
 label start:
     show screen ranking_stats
     ## Need to initialize when player loses and starts over
