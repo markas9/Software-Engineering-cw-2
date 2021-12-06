@@ -11,7 +11,7 @@ label initializeStudent:
             #Currently question types are [own department, generic]
             #list of probabilities for each question type (sums to 1)
            
-            def __init__(self, name, image, probabilities = [0.2,0.8]):
+            def __init__(self, name, image, probabilities = [0.8,0.2]):
                 self.name = name
                 self.image = image
                 self.probabilities = probabilities
