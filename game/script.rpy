@@ -29,6 +29,16 @@ label begin:
     show Julia Padget
     with dissolve
 
+    "Julia Gadget is a Computer Science professor at the University of Bath and has
+        just finished her last lecture for the term."
+    "As she exits her lecture hall to make her way to her car across campus to
+        return to her family for the holidays, concerned students approach her to
+        ask her questions regarding different matters."
+    "Julia is faced with the decision of whether she wants to help the students
+        and therefore increase the university ranking through average scores and
+        satisfaction increasing, or turning down the students and
+        returning home to her family faster."
+>>>>>>> Stashed changes
 
     menu:
 
@@ -37,6 +47,9 @@ label begin:
 
         "Skip to end (testing).":
             jump parking_lot
+<<<<<<< Updated upstream
 
         "Return":
             "Do nothing"
+=======
+>>>>>>> Stashed changes
