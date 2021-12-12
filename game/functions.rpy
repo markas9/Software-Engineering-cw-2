@@ -4,7 +4,7 @@ label initialize:
         ranking_meter = 10
         ranking_meter_max = 100
         user_name = ""
-        #score_leaderboard = []
+        score_leaderboard = []
         #init room list with dungeon length which is then randomized
         department_list = ["math_department", "languages_department", "cs_department"]
         #init music that plays at the START of the game
@@ -18,7 +18,7 @@ label initialize:
 
     define five_points = 5
     define ten_points = 10
-
+    default persistent.score_leaderboard = []
     jump begin
 
 init python:
@@ -32,7 +32,8 @@ init python:
     def addToLeaderboard(username):
         if not persistent.score_leaderboard:
             persistent.score_leaderboard = []
-        persistent.score_leaderboard.append(username)
+        score = username + " - " + str(ranking_meter)
+        persistent.score_leaderboard.append(score)
 
     #using a stack of the room list to jump to next room/student
     def next_scene(label_list, default):

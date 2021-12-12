@@ -1,80 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/parkinglot.rpy", line 66, in script
-    pause
-  File "renpy/common/000statements.rpy", line 455, in execute_pause
-    renpy.pause()
-  File "game/parkinglot.rpy", line 53, in execute
-    screen add_to_leaderboard:
-  File "game/parkinglot.rpy", line 53, in execute
-    screen add_to_leaderboard:
-  File "game/parkinglot.rpy", line 54, in execute
-    button:
-  File "game/parkinglot.rpy", line 56, in execute
-    $user_name = renpy.input("What is your name?", length=32)
-  File "game/parkinglot.rpy", line 56, in <module>
-    $user_name = renpy.input("What is your name?", length=32)
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was <Layer: u'transient'>
-<Many: <Fixed at 39bbd70>>
-<renpy.sl2.slast.SLContext object at 0x044de3d0>
+  File "game/parkinglot.rpy", line 122, in script
+    show screen scoreboard
+  File "renpy/common/000statements.rpy", line 548, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+  File "game/parkinglot.rpy", line 39, in execute
+    screen scoreboard:
+  File "game/parkinglot.rpy", line 39, in execute
+    screen scoreboard:
+  File "game/parkinglot.rpy", line 40, in execute
+    frame:
+  File "game/parkinglot.rpy", line 46, in execute
+    hbox:
+  File "game/parkinglot.rpy", line 46, in keywords
+    hbox:
+  File "game/parkinglot.rpy", line 47, in <module>
+    style myb
+NameError: name 'myb' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/parkinglot.rpy", line 66, in script
-    pause
+  File "game/parkinglot.rpy", line 122, in script
+    show screen scoreboard
   File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2015, in execute
     self.call("execute")
   File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2003, in call
     return renpy.statements.call(method, parsed, *args, **kwargs)
   File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/statements.py", line 278, in call
     return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 455, in execute_pause
-    renpy.pause()
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/exports.py", line 1561, in pause
-    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3315, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3735, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 436, in visit_all
-    callback(self)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3735, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 447, in per_interact
+  File "renpy/common/000statements.rpy", line 548, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 1164, in show_screen
+    sls.add(_layer, d, _tag, zorder=_zorder, transient=_transient, keep_st=True, name=name)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 1117, in add
+    if not self.hide_or_replace(layer, remove_index, "replaced"):
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 1170, in hide_or_replace
+    if not oldsle.displayable._handles_event(prefix):
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 484, in _handles_event
     self.update()
   File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 637, in update
     self.screen.function(**self.scope)
-  File "game/parkinglot.rpy", line 53, in execute
-    screen add_to_leaderboard:
-  File "game/parkinglot.rpy", line 53, in execute
-    screen add_to_leaderboard:
-  File "game/parkinglot.rpy", line 54, in execute
-    button:
-  File "game/parkinglot.rpy", line 56, in execute
-    $user_name = renpy.input("What is your name?", length=32)
-  File "game/parkinglot.rpy", line 56, in <module>
-    $user_name = renpy.input("What is your name?", length=32)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/exports.py", line 937, in input
-    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ui.py", line 292, in interact
-    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was " + ('\n'.join([str(item) for item in stack])))
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was <Layer: u'transient'>
-<Many: <Fixed at 39bbd70>>
-<renpy.sl2.slast.SLContext object at 0x044de3d0>
+  File "game/parkinglot.rpy", line 39, in execute
+    screen scoreboard:
+  File "game/parkinglot.rpy", line 39, in execute
+    screen scoreboard:
+  File "game/parkinglot.rpy", line 40, in execute
+    frame:
+  File "game/parkinglot.rpy", line 46, in execute
+    hbox:
+  File "game/parkinglot.rpy", line 46, in keywords
+    hbox:
+  File "game/parkinglot.rpy", line 47, in <module>
+    style myb
+NameError: name 'myb' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
 The Great Escape of Julia Padget 1.0
-Thu Dec  2 02:55:48 2021
+Sun Dec 12 17:09:44 2021

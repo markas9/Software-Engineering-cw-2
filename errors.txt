@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/parkinglot.rpy", line 53: u'background' is not a keyword argument or valid child for the vbox statement.
-    background "#000000"
-              ^
+File "game/parkinglot.rpy", line 52: Line is indented, but the preceding ypos statement does not expect a block. Please check this line's indentation.
+    xalign 0.5
+    ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Thu Dec  2 20:47:09 2021
+Sun Dec 12 17:12:42 2021

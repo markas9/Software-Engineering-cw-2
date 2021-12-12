@@ -1,10 +1,11 @@
-define jg = Character("Julia Gadget")
+define jp = Character('Julia Padget', color="c8ffc8")
 define s = Character('Student', color="c8ffc8")
 screen ranking_stats:
     frame:
         xalign 0.03 ypos 50
         vbox:
             text "Ranking Meter" size 22 xalign 0.5
+            null height 10
             bar:
                 xmaximum 200
                 value ranking_meter
@@ -13,7 +14,6 @@ screen ranking_stats:
                 right_gutter 0
                 thumb None
                 thumb_shadow None
-
 
 label start:
     show screen ranking_stats
@@ -25,10 +25,13 @@ label begin:
     scene University of Bath Campus
     with fade
 
-
+    "The ranking of the University of Lath has sunk moderately over the years,
+        and with Christmas holidays starting, the time the university has to
+        improve their ranking for the year is steadily decreasing."
+    "University staff is tasked with aiding in the improvement of the rank by
+        attempting to drive up average test scores and student satisfaction."
     show Julia Padget
     with dissolve
-
     "Julia Gadget is a Computer Science professor at the University of Bath and has
         just finished her last lecture for the term."
     "As she exits her lecture hall to make her way to her car across campus to
@@ -38,18 +41,22 @@ label begin:
         and therefore increase the university ranking through average scores and
         satisfaction increasing, or turning down the students and
         returning home to her family faster."
->>>>>>> Stashed changes
 
     menu:
 
         "Start Game?":
-            jump campus_map
+            # jump campus_map
+            window hide
+            $renpy.call_screen("MapScreen",_layer="screens")
 
-        "Skip to end (testing).":
+        "Skip to end (testing). (r=21)":
+            $ranking_meter = 21
             jump parking_lot
-<<<<<<< Updated upstream
 
-        "Return":
-            "Do nothing"
-=======
->>>>>>> Stashed changes
+        "Skip to end (testing). (r=51)":
+            $ranking_meter = 51
+            jump parking_lot
+
+        "Skip to end (testing). (r=81)":
+            $ranking_meter = 81
+            jump parking_lot
