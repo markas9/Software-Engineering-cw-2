@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/parkinglot.rpy", line 52: Line is indented, but the preceding ypos statement does not expect a block. Please check this line's indentation.
-    xalign 0.5
-    ^
+File "game/functions.rpy", line 40: invalid syntax
+        if ranking meter < persistent.score_rankings[10]:
+                        ^
+    
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Sun Dec 12 17:12:42 2021
+Sun Dec 12 19:10:08 2021

@@ -4,7 +4,7 @@ label initialize:
         ranking_meter = 10
         ranking_meter_max = 100
         user_name = ""
-        score_leaderboard = []
+
         #init room list with dungeon length which is then randomized
         department_list = ["math_department", "languages_department", "cs_department"]
         #init music that plays at the START of the game
@@ -18,22 +18,35 @@ label initialize:
 
     define five_points = 5
     define ten_points = 10
-    default persistent.score_leaderboard = []
     jump begin
 
 init python:
     #button which is used to add score on leaderboard
     def addLeaderboardButton():
         user_name = renpy.input("What is your name?", length=32)
-        user_name = user_name.strip()
-        addToLeaderboard(user_name)
+        if user_name == "":
+            renpy.jump("empty_username")
+        else:
+            user_name = user_name.strip()
+            addToLeaderboard(user_name)
 
     #adds user to persistent data
     def addToLeaderboard(username):
         if not persistent.score_leaderboard:
             persistent.score_leaderboard = []
-        score = username + " - " + str(ranking_meter)
-        persistent.score_leaderboard.append(score)
+        if not persistent.score_rankings:
+            persistent.score_rankings = []
+
+        if ranking_meter < persistent.score_rankings[10]:
+            renpy.jump("low_score")
+        else:
+            persistent.score_rankings.append(tuple((username + " - ",ranking_meter)))
+            persistent.score_rankings.sort(key=lambda x:x[1], reverse=True)
+            persistent.score_leaderboard = []
+            for name,rank in persistent.score_rankings[:10]:
+                score = name + str(rank)
+                persistent.score_leaderboard.append(score)
+
 
     #using a stack of the room list to jump to next room/student
     def next_scene(label_list, default):

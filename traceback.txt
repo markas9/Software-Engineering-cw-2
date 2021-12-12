@@ -1,62 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/parkinglot.rpy", line 122, in script
-    show screen scoreboard
-  File "renpy/common/000statements.rpy", line 548, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-  File "game/parkinglot.rpy", line 39, in execute
-    screen scoreboard:
-  File "game/parkinglot.rpy", line 39, in execute
-    screen scoreboard:
-  File "game/parkinglot.rpy", line 40, in execute
-    frame:
-  File "game/parkinglot.rpy", line 46, in execute
-    hbox:
-  File "game/parkinglot.rpy", line 46, in keywords
-    hbox:
-  File "game/parkinglot.rpy", line 47, in <module>
-    style myb
-NameError: name 'myb' is not defined
+  File "game/parkinglot.rpy", line 98, in script
+    $addLeaderboardButton()
+  File "game/parkinglot.rpy", line 98, in <module>
+    $addLeaderboardButton()
+  File "game/functions.rpy", line 28, in addLeaderboardButton
+    addToLeaderboard(user_name)
+  File "game/functions.rpy", line 37, in addToLeaderboard
+    persistent.score_rankings.append(tuple((username + " - ",ranking_meter)))
+NameError: global name 'ranking_meter' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/parkinglot.rpy", line 122, in script
-    show screen scoreboard
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2015, in execute
-    self.call("execute")
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2003, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 548, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 1164, in show_screen
-    sls.add(_layer, d, _tag, zorder=_zorder, transient=_transient, keep_st=True, name=name)
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 1117, in add
-    if not self.hide_or_replace(layer, remove_index, "replaced"):
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 1170, in hide_or_replace
-    if not oldsle.displayable._handles_event(prefix):
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 484, in _handles_event
-    self.update()
-  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 637, in update
-    self.screen.function(**self.scope)
-  File "game/parkinglot.rpy", line 39, in execute
-    screen scoreboard:
-  File "game/parkinglot.rpy", line 39, in execute
-    screen scoreboard:
-  File "game/parkinglot.rpy", line 40, in execute
-    frame:
-  File "game/parkinglot.rpy", line 46, in execute
-    hbox:
-  File "game/parkinglot.rpy", line 46, in keywords
-    hbox:
-  File "game/parkinglot.rpy", line 47, in <module>
-    style myb
-NameError: name 'myb' is not defined
+  File "game/parkinglot.rpy", line 98, in script
+    $addLeaderboardButton()
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\mkoun\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/parkinglot.rpy", line 98, in <module>
+    $addLeaderboardButton()
+  File "game/functions.rpy", line 28, in addLeaderboardButton
+    addToLeaderboard(user_name)
+  File "game/functions.rpy", line 37, in addToLeaderboard
+    persistent.score_rankings.append(tuple((username + " - ",ranking_meter)))
+NameError: global name 'ranking_meter' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
 The Great Escape of Julia Padget 1.0
-Sun Dec 12 17:09:44 2021
+Sun Dec 12 18:40:08 2021

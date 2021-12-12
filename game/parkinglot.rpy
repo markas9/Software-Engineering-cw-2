@@ -43,18 +43,20 @@ screen scoreboard:
         hbox:
             xalign 0.5
             yalign 0.1
-            text "Leaderboard Scores"
-        viewport:
-            mousewheel True
-            draggable True
-            xalign 0.9
-            xpos 0.5
-            ypos 0.2
-            vbox:
-                spacing 10
-                if persistent.score_leaderboard:
-                    for username in persistent.score_leaderboard:
-                        text username
+            text "Leaderboard Scores" size 50
+        # viewport:
+        #     mousewheel True
+        #     draggable True
+        #     xpos 0.5
+        #     ypos 0.2
+        vbox:
+            ymaximum 0.8
+            xalign 0.5
+            yalign 0.4
+            spacing 10
+            if persistent.score_leaderboard:
+                for username in persistent.score_leaderboard:
+                    text username xalign 0.5
 
 screen add_to_leaderboard_button:
     button:
@@ -106,8 +108,12 @@ label clear_data:
 label exit_game:
     return
 
-label empty_scoreboard:
-    "There are no scores in the leaderboard."
+label empty_username:
+    "Invalid username."
+    jump finished
+
+label low_score:
+    "Ranking not high enough to make it to the leaderboard, better luck next time!"
     jump finished
 
 label finished:
