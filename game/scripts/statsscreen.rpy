@@ -5,7 +5,7 @@ screen gameUI:
         yalign 0.0
         xoffset -30
         yoffset 30
-        idle "UI/stats_idle.png"
+        auto "UI/stats_%s.png"
         action ShowMenu("StatsUI")
         
 ## Stats UI

@@ -1,7 +1,5 @@
 label initializeStudent:
     python:
-        import random
-
         #define generic question lists
         genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5"]
         renpy.random.shuffle(genericQuestions)
@@ -17,8 +15,7 @@ label initializeStudent:
                 self.probabilities = probabilities
 
             def getQuestionType(self):
-                random.seed()
-                rnum = random.random()
+                rnum = renpy.random.random()
                 lb = 0
                 ub = self.probabilities[0]
                 for i in range(len(self.probabilities)):
