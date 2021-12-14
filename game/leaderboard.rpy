@@ -1,4 +1,7 @@
 
+image leaderboard_button = im.Scale("images/leaderboard/button1.png", 400,120)
+image leaderboard_button2 = im.Scale("images/leaderboard/button2.png", 400,120)
+
 screen scoreboard:
     frame:
         background Frame("images/leaderboard/blackboard_leaderboard.png")
@@ -9,7 +12,7 @@ screen scoreboard:
         hbox:
             xalign 0.5
             yalign 0.1
-            text "Leaderboard Scores" size 50
+            text "Leaderboard Scores" size 70 bold True
         vbox:
             ymaximum 0.8
             xalign 0.5
@@ -22,40 +25,40 @@ screen scoreboard:
 screen add_to_leaderboard_button:
     button:
         imagebutton:
-            idle "images/leaderboard/button1.png"
-            hover "images/leaderboard/button2.png"
+            idle "leaderboard_button"
+            hover "leaderboard_button2"
             action Jump("addingScore")
-            xpos 0.1
-            ypos 0.7
+            xpos 0.13
+            ypos 0.73
         vbox:
-            xpos 0.14
-            ypos 0.75
+            xpos 0.15
+            ypos 0.765
             text "Add to Leaderboard"
 
 screen clear_scoreboard_button:
     button:
         imagebutton:
-            idle "images/leaderboard/button1.png"
-            hover "images/leaderboard/button2.png"
+            idle "leaderboard_button"
+            hover "leaderboard_button2"
             action Jump("clear_data")
-            xpos 0.38
-            ypos 0.7
+            xpos 0.4
+            ypos 0.73
         vbox:
             xpos 0.43
-            ypos 0.75
+            ypos 0.765
             text "Clear Leaderboard"
 
 screen exit_game_button:
     button:
         imagebutton:
-            idle "images/leaderboard/button1.png"
-            hover "images/leaderboard/button2.png"
+            idle "leaderboard_button"
+            hover "leaderboard_button2"
             action Jump("exit_game")
-            xpos 0.66
-            ypos 0.7
+            xpos 0.67
+            ypos 0.73
         vbox:
-            xpos 0.74
-            ypos 0.75
+            xpos 0.73
+            ypos 0.765
             text "Exit Game"
 
 label addingScore:

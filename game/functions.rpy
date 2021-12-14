@@ -24,7 +24,6 @@ label initialize:
     jump begin
 
 init python:
-
     #button which is used to add score on leaderboard
     def addLeaderboardButton():
         user_name = renpy.input("What is your name?", length=32)
@@ -42,7 +41,7 @@ init python:
             persistent.score_rankings = []
 
         if len(persistent.score_rankings) >= 10:
-            if ranking_meter <= persistent.score_rankings[9]:
+            if ranking_meter <= persistent.score_rankings[9][1]:
                 renpy.jump("low_score")
             else:
                 persistent.score_rankings.append(tuple((username + " - ",ranking_meter)))
