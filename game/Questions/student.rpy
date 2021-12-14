@@ -1,11 +1,5 @@
-label initializeStudent:
-    python:
-        #define generic question lists
-        genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5"]
-        renpy.random.shuffle(genericQuestions)
-
-        
-        class Student:
+init python:
+    class Student:
             #Currently question types are [own department, generic]
             #list of probabilities for each question type (sums to 1)
            
@@ -33,5 +27,12 @@ label initializeStudent:
                 else:
                     question = genericQuestions.pop()
                 return question
+
+label initializeStudent:
+    python:
+        #define generic question lists
+        genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5"]
+        renpy.random.shuffle(genericQuestions)
+
     
     return
