@@ -3,7 +3,7 @@ label initialize:
         #Init ranking meter bar variables
         ranking_meter = 10
         ranking_meter_max = 100
-        #init room list 
+        #init room list
         department_list = ["math_department", "languages_department", "cs_department"]
         #init music that plays at the START of the game
         renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
@@ -24,6 +24,41 @@ label initialize:
     jump begin
 
 init python:
+
+    #button which is used to add score on leaderboard
+    def addLeaderboardButton():
+        user_name = renpy.input("What is your name?", length=32)
+        if user_name == "":
+            renpy.jump("empty_username")
+        else:
+            user_name = user_name.strip()
+            addToLeaderboard(user_name)
+
+    #adds user to persistent data
+    def addToLeaderboard(username):
+        if not persistent.score_leaderboard:
+            persistent.score_leaderboard = []
+        if not persistent.score_rankings:
+            persistent.score_rankings = []
+
+        if len(persistent.score_rankings) >= 10:
+            if ranking_meter <= persistent.score_rankings[9]:
+                renpy.jump("low_score")
+            else:
+                persistent.score_rankings.append(tuple((username + " - ",ranking_meter)))
+                persistent.score_rankings.sort(key=lambda x:x[1], reverse=True)
+                persistent.score_leaderboard = []
+                for name,rank in persistent.score_rankings[:10]:
+                    score = name + str(rank)
+                    persistent.score_leaderboard.append(score)
+        else:
+            persistent.score_rankings.append(tuple((username + " - ",ranking_meter)))
+            persistent.score_rankings.sort(key=lambda x:x[1], reverse=True)
+            persistent.score_leaderboard = []
+            for name,rank in persistent.score_rankings:
+                score = name + str(rank)
+                persistent.score_leaderboard.append(score)
+
     #using a stack of the room list to jump to next room
     def next_scene(label_list, default):
         if len(label_list) == 0:
@@ -51,7 +86,7 @@ init python:
             renpy.show("car_stolen")
 
     def all_visited():
-    
+
         if math_dep_visited and cs_dep_visited and languages_dep_visited:
                 ui.close()
                 renpy.jump("parking_lot")
