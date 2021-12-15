@@ -27,12 +27,3 @@ init python:
                 else:
                     question = genericQuestions.pop()
                 return question
-
-label initializeStudent:
-    python:
-        #define generic question lists
-        genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5"]
-        renpy.random.shuffle(genericQuestions)
-
-    
-    return

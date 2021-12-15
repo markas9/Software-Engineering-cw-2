@@ -1,9 +1,6 @@
 label cs_department:
     python:
         cs_dep_visited = True
-
-        csQuestions = ["cs_question1", "cs_question2", "cs_question3", "cs_question4", "cs_question5"]
-        renpy.random.shuffle(csQuestions)
         
         csStudent = Student("CS Student", "csStudent.png")
     

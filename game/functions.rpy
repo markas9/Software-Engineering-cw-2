@@ -4,6 +4,7 @@ label initialize:
         ranking_meter = 10
         ranking_meter_max = 100
         #init room list 
+        #need to add art and music
         department_list = ["math_department", "languages_department", "cs_department"]
         #init music that plays at the START of the game
         renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
@@ -12,15 +13,16 @@ label initialize:
         math_dep_visited = False
         cs_dep_visited = False
         languages_dep_visited = False
+        art_dep_visited = False
+        music_dep_visited = False
         #player stats
         logic = 1
         creativity = 1
         debating = 1
 
-    define five_points = 5
-    define ten_points = 10
+    define lower_increase = 2
+    define higher_increase = 4
 
-    call initializeStudent
     jump begin
 
 init python:
