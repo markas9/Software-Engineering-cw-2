@@ -1,6 +1,6 @@
 label parking_lot:
     $check_ending_scene()
-    
+
     scene school_gate
     with dissolve
 
@@ -15,11 +15,11 @@ label parking_lot:
 label bad_end:
 
     "Julia arrives in the parking lot at long last, but does not see her car anywhere."
-    "She checks all over the parking lot to see if maybe she forgot where she parked, 
-        but after 10 minutes of looking she comes to the conclusion that her car was stolen." 
+    "She checks all over the parking lot to see if maybe she forgot where she parked,
+        but after 10 minutes of looking she comes to the conclusion that her car was stolen."
     "She takes out her phone to call the police and her insurance, and while dialing up the number,
         gets a notification that the University of Bath’s temporary ranking has fallen to the bottom 25\% of UK universities."
-    
+
     jump finished
 
 
@@ -38,13 +38,16 @@ label good_end:
     "She reaches into her pocket to get the car keys and unlocks it."
     "As she sits there, relieved that the term has come to an end and she can now enjoy the holidays, she notices that the car is awfully cold."
     "She swiftly starts up the engine and turns up the heat, before peacefully pulling out of the parking lot and driving off."
-    
+
     jump finished
-
-
 
 label finished:
 
-    "CONGRATULATIONS FINISHED"
+    window hide
+
+    show screen scoreboard
+    show screen clear_scoreboard_button
+    show screen add_to_leaderboard_button
+    show screen exit_game_button
     pause
-    return
+    jump finished

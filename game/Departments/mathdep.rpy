@@ -3,7 +3,7 @@ label math_department:
         math_dep_visited = True
         
         mathStudent = Student("Math Student", "mathStudent.png")
-    
+
     scene classroom_math_01
     show screen gameUI
     show math_student at right with dissolve
@@ -25,5 +25,3 @@ label math_department:
     hide screen phone
     with dissolve
     $renpy.call_screen("MapScreen",_layer="screens")
-
-
