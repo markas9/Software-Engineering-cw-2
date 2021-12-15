@@ -18,6 +18,12 @@ label math_department:
 
     window hide
     hide screen gameUI
+    "Ring ring! You have a notification!"
+    show screen phone
+    with dissolve
+    pause
+    hide screen phone
+    with dissolve
     $renpy.call_screen("MapScreen",_layer="screens")
 
 

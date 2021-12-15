@@ -10,12 +10,18 @@ label languages_department:
 
     call expression langStudent.getQuestion(langQuestions)
     call expression langStudent.getQuestion(langQuestions)
-    call expression langStudent.getQuestion(langQuestions)
-    call expression langStudent.getQuestion(langQuestions)
-    call expression langStudent.getQuestion(langQuestions)
+    # call expression langStudent.getQuestion(langQuestions)
+    # call expression langStudent.getQuestion(langQuestions)
+    # call expression langStudent.getQuestion(langQuestions)
 
     hide student_languages with dissolve
-    
+
     window hide
     hide screen gameUI
+    "Ring ring! You have a notification!"
+    show screen phone
+    with dissolve
+    pause
+    hide screen phone
+    with dissolve
     $renpy.call_screen("MapScreen",_layer="screens")
