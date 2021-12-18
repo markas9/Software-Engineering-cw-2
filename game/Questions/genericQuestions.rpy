@@ -1,5 +1,5 @@
 
-define genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5", "genericQ6"]
+define genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5", "genericQ6", "genericQ7"]
 $ renpy.random.shuffle(genericQuestions)
 
 label genericQ1:
@@ -90,5 +90,19 @@ label genericQ6:
                 "You dont have enough logic"
                 jump genericQ6
             $ ranking_meter += higher_increase
+            s "R1"
+    return
+
+label genericQ7:
+    s "Mrs. Gadget, if you have described something as indescribable, haven’t you already described it?"
+    menu:
+        "daydreaming again?!":
+            $ ranking_meter -= lower_increase
+            s "R1"
+        "I mean… I guess you’re right in a way… Wait you really stopped me to ask this?":
+            $ ranking_meter += lower_increase
+            s "R1"
+        "This sounds like a question for H.P. Lovecraft.":
+            $ ranking_meter += lower_increase
             s "R1"
     return
