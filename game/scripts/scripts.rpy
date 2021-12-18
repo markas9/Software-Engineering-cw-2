@@ -30,10 +30,11 @@ init python:
         counter +=1
 
     
-    Places[0] = Place(350,150,"math_department", True)
-    Places[1] = Place(200,300, "cs_department", True)
-    Places[2] = Place(820,330,"languages_department", True) 
-    Places[3] = Place(1500,550,"Library", True)
+    Places[0] = Place(330,270,"math_department", True)
+    Places[1] = Place(520,600, "cs_department", True)
+    Places[2] = Place(825,270,"languages_department", True) 
+    Places[3] = Place(1360,300, "art_department", True)
+    Places[4] = Place(1170,650,"music_department", True)
 
 
             

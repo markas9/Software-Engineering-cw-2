@@ -1,4 +1,4 @@
-label music_depmusicment:
+label music_department:
     python:
         music_dep_visited = True
         
@@ -8,10 +8,10 @@ label music_depmusicment:
     show screen gameUI
     show music_Student at right with dissolve
 
-    call expression mathStudent.getQuestion(musicQuestions)
-    call expression mathStudent.getQuestion(musicQuestions)
-    call expression mathStudent.getQuestion(musicQuestions)
-    call expression mathStudent.getQuestion(musicQuestions)
+    call expression musicStudent.getQuestion(musicQuestions)
+    call expression musicStudent.getQuestion(musicQuestions)
+    call expression musicStudent.getQuestion(musicQuestions)
+    call expression musicStudent.getQuestion(musicQuestions)
 
     hide music_Student with dissolve
 

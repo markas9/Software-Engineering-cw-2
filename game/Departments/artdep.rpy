@@ -8,10 +8,10 @@ label art_department:
     show screen gameUI
     show art_Student at right with dissolve
 
-    call expression mathStudent.getQuestion(artQuestions)
-    call expression mathStudent.getQuestion(artQuestions)
-    call expression mathStudent.getQuestion(artQuestions)
-    call expression mathStudent.getQuestion(artQuestions)
+    call expression artStudent.getQuestion(artQuestions)
+    call expression artStudent.getQuestion(artQuestions)
+    call expression artStudent.getQuestion(artQuestions)
+    call expression artStudent.getQuestion(artQuestions)
 
     hide art_Student with dissolve
 
