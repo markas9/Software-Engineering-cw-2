@@ -1,6 +1,3 @@
-define jp = Character('Julia Gadget', color="c8ffc8")
-define s = Character('Student', color="c8ffc8")
-
 label start:
     ## Need to initialize when player loses and starts over
     jump initialize

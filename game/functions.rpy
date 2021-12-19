@@ -24,6 +24,8 @@ label initialize:
 
     define lower_increase = 4
     define higher_increase = 8
+    define jp = Character('Julia Gadget', color="c8ffc8")
+    define s = Character('Student', color="c8ffc8")
 
     jump begin
 
@@ -39,7 +41,6 @@ init python:
 
     #adds user to persistent data
     def addToLeaderboard(username):
-
         if not persistent.score_leaderboard:
             persistent.score_leaderboard = []
         if not persistent.score_rankings:
@@ -62,16 +63,6 @@ init python:
             for name,rank in persistent.score_rankings:
                 score = name + str(rank)
                 persistent.score_leaderboard.append(score)
-
-
-    #using a stack of the room list to jump to next room
-    def next_scene(label_list, default):
-        if len(label_list) == 0:
-            room = renpy.jump(default)
-        else:
-            room = label_list.pop(0)
-        change_music()
-        return room
 
     ##Changes music depending of University ranking meter
     def change_music():
