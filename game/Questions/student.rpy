@@ -42,7 +42,7 @@ label defaultQuestion:
         "You could go ask another teacher some questions, you do seem to love asking questions!":
             $ ranking_meter -= lower_increase
             s "Okay... Rude..."
-        "You should have a splendid day!"
+        "You should have a splendid day!":
             $ ranking_meter += lower_increase
             s "Thats the nicest thing someone has said to me in a long time..."
     return
