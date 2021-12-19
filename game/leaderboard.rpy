@@ -62,7 +62,12 @@ screen exit_game_button:
             text "Exit Game"
 
 label addingScore:
-    $addLeaderboardButton()
+    python:
+        if can_add_leaderboard == True:
+            can_add_leaderboard = False
+            addLeaderboardButton()
+        else:
+            narrator("Can only add score to leaderboard once per run!")
     jump finished
 
 label clear_data:

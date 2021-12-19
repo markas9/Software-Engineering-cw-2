@@ -3,7 +3,7 @@ label initialize:
         #Init ranking meter bar variables
         ranking_meter = 10
         ranking_meter_max = 100
-        #init room list 
+        #init room list
         #need to add art and music
         department_list = ["math_department", "languages_department", "cs_department"]
         #init music that plays at the START of the game
@@ -19,6 +19,8 @@ label initialize:
         logic = 1
         creativity = 1
         debating = 1
+        #boolean value only allowing user to add to leaderboard once
+        can_add_leaderboard = True
 
     define lower_increase = 4
     define higher_increase = 8
@@ -37,6 +39,7 @@ init python:
 
     #adds user to persistent data
     def addToLeaderboard(username):
+
         if not persistent.score_leaderboard:
             persistent.score_leaderboard = []
         if not persistent.score_rankings:
@@ -59,6 +62,7 @@ init python:
             for name,rank in persistent.score_rankings:
                 score = name + str(rank)
                 persistent.score_leaderboard.append(score)
+
 
     #using a stack of the room list to jump to next room
     def next_scene(label_list, default):
