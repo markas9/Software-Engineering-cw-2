@@ -4,6 +4,8 @@ label parking_lot:
     scene school_gate
     with dissolve
 
+    show julia angry
+
     if ranking_meter >= 80:
         jump good_end
     elif ranking_meter >= 40:

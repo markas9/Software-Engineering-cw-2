@@ -20,8 +20,8 @@ label initialize:
         creativity = 1
         debating = 1
 
-    define lower_increase = 2
-    define higher_increase = 4
+    define lower_increase = 4
+    define higher_increase = 8
 
     jump begin
 

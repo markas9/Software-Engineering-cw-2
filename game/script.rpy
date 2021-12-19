@@ -22,6 +22,8 @@ label start:
 
 
 label begin:
+    image julia angry = "characters/julia_outfit1_angry.png"
+
     scene University of Bath Campus
     with fade
 
@@ -30,7 +32,7 @@ label begin:
         improve their ranking for the year is steadily decreasing."
     "University staff is tasked with aiding in the improvement of the rank by 
         attempting to drive up average test scores and student satisfaction."
-    show Julia Padget
+    show julia angry
     with dissolve
     "Julia Gadget is a Computer Science professor at the University of Bath and has 
         just finished her last lecture for the term."
@@ -45,7 +47,6 @@ label begin:
     menu:
 
         "Start Game?":
-            # jump campus_map
             window hide
             $renpy.call_screen("MapScreen",_layer="screens")
 
@@ -61,4 +62,9 @@ label begin:
             $ranking_meter = 81
             jump parking_lot
 
+        "music":
+            jump music_department
+
+        "art":
+            jump art_department
 
