@@ -11,7 +11,7 @@ screen MapScreen():
         # yalign 0.0
         # xsize 192
         # ysize 108
-        background Frame("map.png")
+        background Frame("map.jpg")
         xmaximum 0.999
         ymaximum 0.999
         xalign 0
@@ -51,12 +51,26 @@ screen MapScreen():
                             background "#f7f7f7"
                             action Jump ("languages_department")
                             yalign 0.5
+                    
+                    elif i.name=="art_department" and not art_dep_visited:
+                        button:
+                            text i.name size 20 color "#000000"
+                            background "#f7f7f7"
+                            action Jump ("art_department")
+                            yalign 0.5
+                    
+                    elif i.name=="music_department" and not music_dep_visited:
+                        button:
+                            text i.name size 20 color "#000000"
+                            background "#f7f7f7"
+                            action Jump ("music_department")
+                            yalign 0.5
 
                     else:
                         button:
-                            text i.name size 35 color "#db1616"
-                            background "#000000"
-                            action Jump ("cs_department")
+                            text i.name size 20 color "#f50c0c"
+                            background "#a39e9e"
+                            action NullAction()
                             yalign 0.5
 
 

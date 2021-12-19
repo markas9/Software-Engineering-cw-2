@@ -1,4 +1,5 @@
 label music_department:
+
     image musicStudent = "characters/s1-normal.png"
     image musicStudent smile = "characters/s1-smile2.png"
     image musicStudent frown = "characters/s1-angry.png"
