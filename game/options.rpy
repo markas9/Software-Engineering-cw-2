@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("The Great Escape of Julia Padget")
+define config.name = _("The Great Escape of Julia Gadget")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "TheGreatEscapeofJuliaPadget"
+define build.name = "TheGreatEscapeofJuliaGadget"
 
 
 ## Sounds and music ############################################################
@@ -143,7 +143,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "TheGreatEscapeofJuliaPadget-1637409668"
+define config.save_directory = "TheGreatEscapeofJuliaGadget-1637409668"
 
 
 ## Icon ########################################################################
