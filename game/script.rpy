@@ -31,21 +31,3 @@ label begin:
         "Start Game?":
             window hide
             $renpy.call_screen("MapScreen",_layer="screens")
-
-        "Skip to end (testing). (r=21)":
-            $ranking_meter = 21
-            jump parking_lot
-
-        "Skip to end (testing). (r=51)":
-            $ranking_meter = 51
-            jump parking_lot
-
-        "Skip to end (testing). (r=81)":
-            $ranking_meter = 81
-            jump parking_lot
-
-        "music":
-            jump music_department
-
-        "art":
-            jump art_department
