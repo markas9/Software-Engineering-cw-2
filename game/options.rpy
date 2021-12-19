@@ -18,7 +18,7 @@ define config.name = _("The Great Escape of Julia Gadget")
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
@@ -143,7 +143,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "TheGreatEscapeofJuliaPadget-1637409668"
+define config.save_directory = "TheGreatEscapeofJuliaGadget-1637409668"
 
 
 ## Icon ########################################################################

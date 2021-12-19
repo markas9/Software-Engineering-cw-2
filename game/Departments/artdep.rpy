@@ -12,10 +12,12 @@ label art_department:
     show screen gameUI
     show artStudent at left with dissolve
 
+
     call expression art_Student.getQuestion(artQuestions)
     call expression art_Student.getQuestion(artQuestions)
     call expression art_Student.getQuestion(artQuestions)
     call expression art_Student.getQuestion(artQuestions)
+
 
     if ranking_meter < rankingBefore:
         show artStudent frown
