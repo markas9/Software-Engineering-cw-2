@@ -23,7 +23,7 @@ label languages_department:
         show soraW frown
         "You wern't very helpful.... I'll go ask someone else for help. :("
     else:
-        show soraW smile blush
+        show soraW smile
         "Thanks so much for the help! Bye! :)"
 
     hide student_languages with dissolve
