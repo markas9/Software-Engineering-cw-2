@@ -12,7 +12,7 @@ screen shop(seller):
 
         vbox:
             xalign .5
-            # column names
+            
             hbox:
                 style_group "description"
                 xsize 520
@@ -23,14 +23,14 @@ screen shop(seller):
                 label _("In Bag")
                 label _("Price") xalign 1.0
 
-            # list of item buttons
+           
             frame:
                 margin (14,14)
                 use shoplist(seller)
 
     use item_description()
 
-    # you can change the style at the bottom of item-screens.rpy
+    
     textbutton _("Return"):
         style "offset_return_button"
         yalign .98
@@ -41,7 +41,7 @@ screen shoplist(seller):
     vpgrid style_prefix "marketitem":
         cols 1 mousewheel True draggable True scrollbars "vertical"
 
-        # item buttons
+      
         for item in seller:
             $ thisitem = InvItem(*set_item(item))
             button:
@@ -49,10 +49,10 @@ screen shoplist(seller):
                 hovered SetVariable("selected_item", item)
                 sensitive thisitem.check_price()
 
-                # mark items as new
+               
                 if item not in seen_items:
                     foreground "itemmarker"
-                # show item image and name
+               
                 hbox:
                     if thisitem.check_price():
                         add thisitem.image
@@ -61,7 +61,7 @@ screen shoplist(seller):
                     null width 10
                     text "[thisitem.name!t]" style "marketitem_button_text"
 
-                # how many in bag, and price
+                
                 hbox:
                     align (.98,.5)
                     text "{}" .format(inv.count(item)) style "marketitem_button_text"
@@ -78,14 +78,14 @@ style marketitem_button_text is item_button_text:
 screen buying(whichitem, howmuch, selling=False):
     modal True
 
-    add Solid("#f2cdd980") #transparent overlay
+    add Solid("#f2cdd980") 
 
     default amount = 1
 
     frame:
         style_group "making"
 
-        # change label based on the action
+        
         if howmuch > 0:
             if selling:
                 label _("Selling...") style "description_label" anchor (20,44)
@@ -97,7 +97,7 @@ screen buying(whichitem, howmuch, selling=False):
         vbox:
             xalign .5
             yfill True
-            # item name and a button to cancel out
+            
             frame:
                 style_group "special_small"
                 has hbox
@@ -111,7 +111,7 @@ screen buying(whichitem, howmuch, selling=False):
 
             null height 10
 
-            # arrow buttons to select amount, with the item image in between
+            
             hbox:
                 style_prefix "inventory"
                 ysize 48
@@ -143,7 +143,7 @@ screen buying(whichitem, howmuch, selling=False):
                         action SetScreenVariable("amount", (amount+1))
                         sensitive amount < inv.count(whichitem.id)
 
-            # shortcuts to set amount to 1 or max
+            
             hbox:
                 style_prefix "inventory"
                 xalign .5
@@ -166,7 +166,7 @@ screen buying(whichitem, howmuch, selling=False):
                         action SetScreenVariable("amount", inv.count(whichitem.id))
                         sensitive amount < inv.count(whichitem.id)
 
-            # show how many we have and how much the final price will be
+            
             hbox:
                 xsize 300
                 xfill True
@@ -184,7 +184,7 @@ screen buying(whichitem, howmuch, selling=False):
                         text _("Price:")
                         text "[price]" yalign .5
 
-            # buttons to make it happen
+            
             if howmuch > 0:
                 if selling:
                     textbutton _("SELL"):

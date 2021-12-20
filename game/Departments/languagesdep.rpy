@@ -13,8 +13,8 @@ label languages_department:
     show screen gameUI
     show soraW smile at center with dissolve
 
-    call expression langStudent.getQuestion(langQuestions)
-    call expression langStudent.getQuestion(langQuestions)
+    call expression langStudent.getQuestion(langQuestions) from _call_expression
+    call expression langStudent.getQuestion(langQuestions) from _call_expression_1
     # call expression langStudent.getQuestion(langQuestions)
     # call expression langStudent.getQuestion(langQuestions)
     # call expression langStudent.getQuestion(langQuestions)

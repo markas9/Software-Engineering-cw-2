@@ -13,10 +13,10 @@ label music_department:
     show screen gameUI
     show musicStudent at right with dissolve
 
-    call expression musicStudent.getQuestion(musicQuestions)
-    call expression musicStudent.getQuestion(musicQuestions)
-    call expression musicStudent.getQuestion(musicQuestions)
-    call expression musicStudent.getQuestion(musicQuestions)
+    call expression musicStudent.getQuestion(musicQuestions) from _call_expression_11
+    call expression musicStudent.getQuestion(musicQuestions) from _call_expression_12
+    call expression musicStudent.getQuestion(musicQuestions) from _call_expression_13
+    call expression musicStudent.getQuestion(musicQuestions) from _call_expression_14
 
     if ranking_meter < rankingBefore:
         show musicStudent frown

@@ -12,11 +12,11 @@ label math_department:
     show screen gameUI
     show sora smile at right with dissolve
 
-    call expression mathStudent.getQuestion(mathQuestions)
-    call expression mathStudent.getQuestion(mathQuestions)
-    call expression mathStudent.getQuestion(mathQuestions)
-    call expression mathStudent.getQuestion(mathQuestions)
-    call expression mathStudent.getQuestion(mathQuestions)
+    call expression mathStudent.getQuestion(mathQuestions) from _call_expression_15
+    call expression mathStudent.getQuestion(mathQuestions) from _call_expression_16
+    call expression mathStudent.getQuestion(mathQuestions) from _call_expression_17
+    call expression mathStudent.getQuestion(mathQuestions) from _call_expression_18
+    call expression mathStudent.getQuestion(mathQuestions) from _call_expression_19
 
     if ranking_meter < rankingBefore:
         show sora frown

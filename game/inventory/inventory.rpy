@@ -9,12 +9,7 @@ image buy= im.Scale("rooms/beta.jpg", 1920,1080)
 #     seen_items = []
 #     market = []
 
-# $ market = [ "item_paper", "item_calculator", "item_books" ]
-    
-# ## INVENTORY SETUP
-# $ InvItem(*item_books).pickup(3)
-# $ InvItem(*item_paper).pickup(2)
-# $ InvItem(*item_calculator).pickup(1)
+
 label test_menu:
     scene beta
     menu:
@@ -28,7 +23,7 @@ label test_menu:
             jump begin
        
 
-##ITEMS
+
 label inventory:
     scene bg shop
     call screen inventory(inv) 

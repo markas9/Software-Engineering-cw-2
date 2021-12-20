@@ -66,24 +66,21 @@ init -2 python:
 
 
 
-# define item_water = (_("Water"), "item water", 2,
-#     _(" It's clean enough to drink."), "item_water")
+
 
 define item_paper = (_("Paper"), "item paper", 3,
     _("The support material of solving questions."), "item_paper")
 
 define item_calculator = (_("Calculator"), "item calculator", 5,
     _("Get help in those math questions!"), "item_calculator")
-# define item_key = (_("Key"), "item key", 8,
-#     _("Especial key for car"), "item_key")
+
 define item_books = (_("Books"), "item books", 8,
     _("To solve the tricky ones"), "item_books")
 
 define itemlist = [
-    # item_water,
+    
     item_paper,
     item_calculator,
-    # item_key,
     item_books
     ]
 

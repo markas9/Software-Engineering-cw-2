@@ -10,7 +10,7 @@ screen gold_count():
         xfill True
 
         label _("Gold")
-        #add "money icon"
+        
 
         text "{}" .format(gold) xalign 1.0 color "#000000"
 
@@ -55,21 +55,7 @@ screen inventory(collection, selling=False):
     use invgrid(collection, page, first, last)
 
   
-    # hbox:
-    #     xpos 562
-    #     yalign .44
-    #     spacing 532
-    #     textbutton "<" ysize 256:
-    #         sensitive first>0
-    #         action [ SetScreenVariable("first", first-invgrid_x*invgrid_y), SetScreenVariable("last", last-invgrid_x*invgrid_y),
-    #         SetScreenVariable("page",page-1) ]
-
-    #     textbutton ">" ysize 256:
-    #         sensitive len(collection)>last
-    #         action [ SetScreenVariable("first", first+invgrid_x*invgrid_y), SetScreenVariable("last", last+invgrid_x*invgrid_y),
-    #         SetScreenVariable("page",page+1) ]
-
-    # sorting
+  
     hbox:
         xpos 600
         yalign .24

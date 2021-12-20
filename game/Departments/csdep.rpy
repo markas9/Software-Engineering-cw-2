@@ -13,11 +13,11 @@ label cs_department:
     show screen gameUI
     show soraC smile at left with dissolve
 
-    call expression csStudent.getQuestion(csQuestions)
-    call expression csStudent.getQuestion(csQuestions)
-    call expression csStudent.getQuestion(csQuestions)
-    call expression csStudent.getQuestion(csQuestions)
-    call expression csStudent.getQuestion(csQuestions)
+    call expression csStudent.getQuestion(csQuestions) from _call_expression_2
+    call expression csStudent.getQuestion(csQuestions) from _call_expression_3
+    call expression csStudent.getQuestion(csQuestions) from _call_expression_4
+    call expression csStudent.getQuestion(csQuestions) from _call_expression_5
+    call expression csStudent.getQuestion(csQuestions) from _call_expression_6
 
     if ranking_meter < rankingBefore:
         show soraC frown
