@@ -1,9 +1,8 @@
 label parking_lot:
-    $check_ending_scene()
 
-    if ranking_meter >= 80:
+    if ranking_meter >= 60:
         jump good_end
-    elif ranking_meter >= 40:
+    elif ranking_meter >= 30:
         jump medium_end
     else:
         jump bad_end
