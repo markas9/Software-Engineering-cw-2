@@ -1,5 +1,7 @@
-define musicQuestions = ["music_question1", "music_question2", "music_question3"]
-$ renpy.random.shuffle(musicQuestions)
+label initMusicQuestions:
+    define musicQuestions = ["music_question1", "music_question2", "music_question3"]
+    $ renpy.random.shuffle(musicQuestions)
+    return
 
 label music_question1:
     s "I really enjoy the song American Pie by Don McLean, but what exactly was that song about?"

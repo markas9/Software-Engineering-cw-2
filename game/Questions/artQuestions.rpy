@@ -1,5 +1,7 @@
-define artQuestions = ["art_question1", "art_question2", "art_question3"]
-$ renpy.random.shuffle(artQuestions)
+label initArtQuestions:
+    $ artQuestions = ["art_question1", "art_question2", "art_question3"]
+    $ renpy.random.shuffle(artQuestions)
+    return 
 
 label art_question1:
     s "I just found out Adolf Hitler was also a painter, and while I find that really interesting and would like to see his work, I’m afraid I’ll end up on a government watchlist if I search for his work on google..."

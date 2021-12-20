@@ -27,7 +27,14 @@ label initialize:
     define jp = Character('Julia Gadget', color="c8ffc8")
     define s = Character('Student', color="c8ffc8")
 
-    jump begin
+    call initGenericQuestions
+    call initCsQuestions
+    call initMathQuestions
+    call initLanguagesQuestions
+    call initMusicQuestions
+    call initArtQuestions
+
+    return
 
 init python:
     #button which is used to add score on leaderboard

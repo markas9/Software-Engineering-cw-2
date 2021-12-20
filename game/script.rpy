@@ -1,10 +1,9 @@
+
 label start:
-    ## Need to initialize when player loses and starts over
-    jump initialize
-
-
-label begin:
+    call initialize
     image julia angry = "characters/julia_outfit1_angry.png"
+    
+    
 
     scene afternoon01
     with fade

@@ -1,6 +1,7 @@
-
-define genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5", "genericQ6", "genericQ7"]
-$ renpy.random.shuffle(genericQuestions)
+label initGenericQuestions:
+    $ genericQuestions = ["genericQ1", "genericQ2", "genericQ3", "genericQ4", "genericQ5", "genericQ6", "genericQ7"]
+    $ renpy.random.shuffle(genericQuestions)
+    return
 
 label genericQ1:
     s "If a tree falls in the forest, and nobody is around to hear it, does it make a sound?"
