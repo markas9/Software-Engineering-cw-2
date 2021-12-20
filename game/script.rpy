@@ -22,7 +22,12 @@ label start:
         and therefore increase the university ranking through average scores and
         satisfaction increasing, or turning down the students and
         returning home to her family faster."
-    
+
+    jump begin
+
+label begin:
+    scene afternoon01
+    show julia angry
     menu:
         
         "Start Game?":
@@ -31,5 +36,4 @@ label start:
 
         "Inventory (Beta Phase)":
             
-            jump test_menu 
-       
+            jump test_menu
