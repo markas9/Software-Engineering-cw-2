@@ -293,9 +293,15 @@ screen navigation():
 
     vbox:
         style_prefix "navigation"
+        if main_menu:
+            xalign 0.5
+        else:
+            xoffset 60
 
-        xalign 0.5
-        yalign 0.1
+        if main_menu:
+            yalign 0.1
+        else: 
+            yalign 0.5
 
         spacing gui.navigation_spacing
 
@@ -311,7 +317,7 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("preferences") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -344,8 +350,8 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+    font "fonts/KeeponTruckin.ttf"
     xalign 0.5
-
 
 ## Main Menu screen ############################################################
 ##
@@ -357,6 +363,8 @@ screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
+
+    
 
     add gui.main_menu_background
 
@@ -372,7 +380,6 @@ screen main_menu():
 
         vbox:
             style "main_menu_vbox"
-
             text "[config.name!t]":
                 style "main_menu_title"
 
@@ -565,6 +572,7 @@ screen about():
                 text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+
 
 
 style about_label is gui_label
@@ -1473,6 +1481,7 @@ style game_menu_content_frame:
 style pref_vbox:
     variant "small"
     xsize 600
+
 
 style bar:
     variant "small"

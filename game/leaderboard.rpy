@@ -12,7 +12,7 @@ screen scoreboard:
         hbox:
             xalign 0.5
             yalign 0.1
-            text "Leaderboard Scores" size 70 bold True
+            text "Leaderboard Scores" color "#f7f7f7"size 70 bold True
         vbox:
             ymaximum 0.8
             xalign 0.5
@@ -20,7 +20,7 @@ screen scoreboard:
             spacing 10
             if persistent.score_leaderboard:
                 for username in persistent.score_leaderboard:
-                    text username xalign 0.5
+                    text username xalign 0.5 color "#f7f7f7"
 
 screen add_to_leaderboard_button:
     button:
@@ -62,7 +62,12 @@ screen exit_game_button:
             text "Exit Game"
 
 label addingScore:
-    $addLeaderboardButton()
+    python:
+        if can_add_leaderboard == True:
+            can_add_leaderboard = False
+            askUserName()
+        else:
+            narrator("Can only add score to leaderboard once per run!")
     jump finished
 
 label clear_data:

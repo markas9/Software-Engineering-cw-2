@@ -70,12 +70,12 @@ label cs_question4:
         "I don’t, but I used to. I still have all my old cards, though I don’t remember where they are.":
             $ ranking_meter += lower_increase
             s "Thats a shame but its cool you used to collect card!"
-        "Very strange question, but no, I do not. My children love Pokemon though.":
+        "I did many moons ago.":
             $ ranking_meter += higher_increase
             s "Okay this is unexpected, but yes, I love Pokemon. What’s your favorite generation?
                 I personally love Scyther, it’s such a cool Pokemon. I also played the games. I remember
                 in Pokemon Blue I completed the entire Pokedex. I was obsessed. I can’t believe they are
-                still coming out with new games. I appreciate it though, as it is keeping the love for Pokemon alive."
+                still coming out with new games. I appreciate it though!"
     return
 
 label cs_question5:
