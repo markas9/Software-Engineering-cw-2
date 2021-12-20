@@ -1,29 +1,29 @@
 label languages_department:
-    image soraW smile blush = "characters/Sora_WinterUni_Smile_Blush.png"
-    image soraW smile = "characters/Sora_WinterUni_Smile.png"
+    image soraW smile = "characters/Sora_WinterUni_Smile_Blush.png"
+    image soraW = "characters/Sora_WinterUni_Smile.png"
     image soraW frown = "characters/Sora_WinterUni_Frown.png"
 
 
     python:
         languages_dep_visited = True
         rankingBefore = ranking_meter
-        langStudent = Student("Lang Student", "langStudent.png")
+        langStudent = Student()
 
     scene classroom_generic_01
     show screen gameUI
-    show soraW smile at center with dissolve
+    show soraW at center with dissolve
 
     call expression langStudent.getQuestion(langQuestions)
     call expression langStudent.getQuestion(langQuestions)
-    # call expression langStudent.getQuestion(langQuestions)
-    # call expression langStudent.getQuestion(langQuestions)
-    # call expression langStudent.getQuestion(langQuestions)
+    call expression langStudent.getQuestion(langQuestions)
+    call expression langStudent.getQuestion(langQuestions)
+    call expression langStudent.getQuestion(langQuestions)
 
     if ranking_meter < rankingBefore:
         show soraW frown
         "You wern't very helpful.... I'll go ask someone else for help. :("
     else:
-        show soraW smile blush
+        show soraW smile
         "Thanks so much for the help! Bye! :)"
 
     hide student_languages with dissolve

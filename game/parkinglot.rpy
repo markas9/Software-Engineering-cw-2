@@ -1,11 +1,6 @@
 label parking_lot:
     $check_ending_scene()
 
-    scene school_gate
-    with dissolve
-
-    show julia angry
-
     if ranking_meter >= 80:
         jump good_end
     elif ranking_meter >= 40:
@@ -15,7 +10,8 @@ label parking_lot:
 
 
 label bad_end:
-
+    scene car_gone
+    
     "Julia arrives in the parking lot at long last, but does not see her car anywhere."
     "She checks all over the parking lot to see if maybe she forgot where she parked,
         but after 10 minutes of looking she comes to the conclusion that her car was stolen."
@@ -26,6 +22,8 @@ label bad_end:
 
 
 label medium_end:
+    scene vandalized
+
 
     "Julia arrives in the parking lot, ready to go home, but finds that her car has been vandalized with graffiti."
     "She looks over the car and takes pictures from each side to make sure she has documentation of the crime."
@@ -35,6 +33,7 @@ label medium_end:
 
 
 label good_end:
+    scene sixhundered
 
     "After feeling like she did a good job helping students, Julia reaches her car in the parking lot."
     "She reaches into her pocket to get the car keys and unlocks it."

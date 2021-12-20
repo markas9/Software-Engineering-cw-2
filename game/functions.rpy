@@ -88,6 +88,6 @@ init python:
 
     def all_visited():
 
-        if math_dep_visited and cs_dep_visited and languages_dep_visited:
+        if math_dep_visited and cs_dep_visited and languages_dep_visited and art_dep_visited and music_dep_visited:
                 ui.close()
                 renpy.jump("parking_lot")
