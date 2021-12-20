@@ -7,9 +7,9 @@ label music_department:
     python:
         music_dep_visited = True
         rankingBefore = ranking_meter    
-        musicStudent = Student("music Student", "musicStudent.png")
+        musicStudent = Student()
     
-    scene classroom_math_01 #change to music dep scene
+    scene musicdep #change to music dep scene
     show screen gameUI
     show musicStudent at right with dissolve
 

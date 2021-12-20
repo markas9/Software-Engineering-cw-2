@@ -1,6 +1,8 @@
-define csQuestions = ["cs_question1", "cs_question2", "cs_question3", "cs_question4", "cs_question5"]
-$ renpy.random.shuffle(csQuestions)
-
+label initCsQuestions:
+    $ csQuestions = ["cs_question1", "cs_question2", "cs_question3", "cs_question4", "cs_question5"]
+    $ renpy.random.shuffle(csQuestions)
+    return 
+    
 label cs_question1:
     s "Why does my Python code not work? I checked over and over but it looks right to me."
     menu:

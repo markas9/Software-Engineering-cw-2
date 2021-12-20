@@ -1,5 +1,18 @@
 label initialize:
     python:
+        gold = 20 #starting amount
+        inv = []
+        seen_items = []
+        market = []
+    
+    $ market = [ "item_paper", "item_calculator", "item_books" ]
+      
+    ## INVENTORY SETUP
+    $ InvItem(*item_books).pickup(3)
+    $ InvItem(*item_paper).pickup(2)
+    $ InvItem(*item_calculator).pickup(1)
+
+    python:
         #Init ranking meter bar variables
         ranking_meter = 10
         ranking_meter_max = 100
@@ -27,7 +40,14 @@ label initialize:
     define jp = Character('Julia Gadget', color="c8ffc8")
     define s = Character('Student', color="c8ffc8")
 
-    jump begin
+    call initGenericQuestions
+    call initCsQuestions
+    call initMathQuestions
+    call initLanguagesQuestions
+    call initMusicQuestions
+    call initArtQuestions
+
+    return
 
 init python:
     #button which is used to add score on leaderboard
@@ -67,11 +87,11 @@ init python:
     ##Changes music depending of University ranking meter
     def change_music():
         if(renpy.music.get_playing(channel=u'music') != "audio/Funny 8-bit music(lower_volume).mp3"):
-            if(ranking_meter >= 20):
+            if(ranking_meter >= 30):
                 renpy.music.play("audio/Funny 8-bit music(lower_volume).mp3", fadeout=1)
 
         if(renpy.music.get_playing(channel=u'music') != "audio/Land_of_8_Bits(lower_volume).mp3"):
-            if(ranking_meter >= 40):
+            if(ranking_meter >= 60):
                 renpy.music.play("audio/Land_of_8_Bits(lower_volume).mp3", fadeout=1)
 
 

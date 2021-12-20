@@ -6,9 +6,9 @@ label art_department:
     python:
         art_dep_visited = True
         rankingBefore = ranking_meter    
-        art_Student = Student("art Student", "artStudent.png")
+        art_Student = Student()
     
-    scene classroom_math_01 #change to art dep scene
+    scene artdep #change to art dep scene
     show screen gameUI
 
     show artStudent at left with dissolve

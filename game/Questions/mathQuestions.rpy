@@ -1,5 +1,7 @@
-define mathQuestions = ["math_question1", "math_question2", "math_question3", "math_question4", "math_question5"]
-$ renpy.random.shuffle(mathQuestions)
+label initMathQuestions:
+    $ mathQuestions = ["math_question1", "math_question2", "math_question3", "math_question4", "math_question5"]
+    $ renpy.random.shuffle(mathQuestions)
+    return
 
 label math_question1:
     s "What is an obtuse angle?"

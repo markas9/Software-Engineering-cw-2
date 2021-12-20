@@ -1,5 +1,7 @@
-define langQuestions = ["lang_question1", "lang_question2", "lang_question3", "lang_question4", "lang_question5"]
-$ renpy.random.shuffle(langQuestions)
+label initLanguagesQuestions:
+    $ langQuestions = ["lang_question1", "lang_question2", "lang_question3", "lang_question4", "lang_question5"]
+    $ renpy.random.shuffle(langQuestions)
+    return
 
 label lang_question1:
     s "I listened to this song and they said “voulez vous coucher avec moi, ce soir?” What does that mean?"

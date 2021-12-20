@@ -1,25 +1,8 @@
 
 label start:
-    python:
-        gold = 20 #starting amount
-        inv = []
-        seen_items = []
-        market = []
-    
-    $ market = [ "item_paper", "item_calculator", "item_books" ]
-      
-    ## INVENTORY SETUP
-    $ InvItem(*item_books).pickup(3)
-    $ InvItem(*item_paper).pickup(2)
-    $ InvItem(*item_calculator).pickup(1)
-    
-    ## Need to initialize when player loses and starts over
-    jump initialize
-
-
-label begin:
+    call initialize
     image julia angry = "characters/julia_outfit1_angry.png"
-
+    
     scene afternoon01
     with fade
 
