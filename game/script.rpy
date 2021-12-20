@@ -3,8 +3,6 @@ label start:
     call initialize
     image julia angry = "characters/julia_outfit1_angry.png"
     
-    
-
     scene afternoon01
     with fade
 
@@ -24,9 +22,14 @@ label start:
         and therefore increase the university ranking through average scores and
         satisfaction increasing, or turning down the students and
         returning home to her family faster."
-
+    
     menu:
-
+        
         "Start Game?":
             window hide
             $renpy.call_screen("MapScreen",_layer="screens")
+
+        "Inventory (Beta Phase)":
+            
+            jump test_menu 
+       

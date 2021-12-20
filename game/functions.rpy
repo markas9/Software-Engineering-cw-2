@@ -1,5 +1,18 @@
 label initialize:
     python:
+        gold = 20 #starting amount
+        inv = []
+        seen_items = []
+        market = []
+    
+    $ market = [ "item_paper", "item_calculator", "item_books" ]
+      
+    ## INVENTORY SETUP
+    $ InvItem(*item_books).pickup(3)
+    $ InvItem(*item_paper).pickup(2)
+    $ InvItem(*item_calculator).pickup(1)
+
+    python:
         #Init ranking meter bar variables
         ranking_meter = 10
         ranking_meter_max = 100
@@ -38,7 +51,7 @@ label initialize:
 
 init python:
     #button which is used to add score on leaderboard
-    def addLeaderboardButton():
+    def askUserName():
         user_name = renpy.input("What is your name?", length=32)
         if user_name == "":
             renpy.jump("empty_username")

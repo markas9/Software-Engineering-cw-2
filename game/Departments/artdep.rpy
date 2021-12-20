@@ -10,13 +10,14 @@ label art_department:
     
     scene artdep #change to art dep scene
     show screen gameUI
+
     show artStudent at left with dissolve
 
 
-    call expression art_Student.getQuestion(artQuestions)
-    call expression art_Student.getQuestion(artQuestions)
-    call expression art_Student.getQuestion(artQuestions)
-    call expression art_Student.getQuestion(artQuestions)
+    call expression art_Student.getQuestion(artQuestions) from _call_expression_7
+    call expression art_Student.getQuestion(artQuestions) from _call_expression_8
+    call expression art_Student.getQuestion(artQuestions) from _call_expression_9
+    call expression art_Student.getQuestion(artQuestions) from _call_expression_10
 
 
     if ranking_meter < rankingBefore:
