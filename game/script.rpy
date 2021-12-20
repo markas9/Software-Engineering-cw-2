@@ -1,6 +1,6 @@
 
 label start:
-    call initialize
+    call initialize from _call_initialize
     image julia angry = "characters/julia_outfit1_angry.png"
     
     scene afternoon01

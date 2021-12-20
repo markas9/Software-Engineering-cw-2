@@ -299,7 +299,7 @@ screen navigation():
             xoffset 60
 
         if main_menu:
-            yalign 0.1
+            yalign 0.2
         else: 
             yalign 0.5
 
@@ -315,9 +315,9 @@ screen navigation():
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+            textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("preferences") action ShowMenu("preferences")
+            textbutton _("preferences") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -327,12 +327,10 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+            textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help") action ShowMenu("help")
+
 
         if renpy.variant("pc"):
 

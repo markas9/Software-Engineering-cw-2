@@ -15,9 +15,9 @@ label languages_department:
 
     call expression langStudent.getQuestion(langQuestions) from _call_expression
     call expression langStudent.getQuestion(langQuestions) from _call_expression_1
-    call expression langStudent.getQuestion(langQuestions)
-    call expression langStudent.getQuestion(langQuestions)
-    call expression langStudent.getQuestion(langQuestions)
+    call expression langStudent.getQuestion(langQuestions) from _call_expression_20
+    call expression langStudent.getQuestion(langQuestions) from _call_expression_21
+    call expression langStudent.getQuestion(langQuestions) from _call_expression_22
 
     if ranking_meter < rankingBefore:
         show soraW frown

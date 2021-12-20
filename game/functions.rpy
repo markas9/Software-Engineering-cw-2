@@ -40,12 +40,12 @@ label initialize:
     define jp = Character('Julia Gadget', color="c8ffc8")
     define s = Character('Student', color="c8ffc8")
 
-    call initGenericQuestions
-    call initCsQuestions
-    call initMathQuestions
-    call initLanguagesQuestions
-    call initMusicQuestions
-    call initArtQuestions
+    call initGenericQuestions from _call_initGenericQuestions
+    call initCsQuestions from _call_initCsQuestions
+    call initMathQuestions from _call_initMathQuestions
+    call initLanguagesQuestions from _call_initLanguagesQuestions
+    call initMusicQuestions from _call_initMusicQuestions
+    call initArtQuestions from _call_initArtQuestions
 
     return
 
